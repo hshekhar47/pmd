@@ -1,0 +1,24 @@
+ext {
+    springBootRelease = '2.0.0.RELEASE'
+
+    vGuava = "23.0"
+    vLombok = '1.16.20'
+    vJacksonXml = "2.9.4"
+    vJodaTime = '2.3'
+    vJunit = '4.12'
+    vSl4j = '1.7.25'
+
+    appdependencies = [
+            guava       : "com.google.guava:guava:${vGuava}",
+            jacksonXml  : "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${vJacksonXml}",
+            jodaTime    : "joda-time:joda-time:${vJodaTime}",
+            lombok      : "org.projectlombok:lombok:${vLombok}",
+            junit       : "junit:junit:${vJunit}",
+            sl4j        : "org.slf4j:slf4j-log4j12:${vSl4j}",
+
+            web         : "org.springframework.boot:spring-boot-starter-web",
+            jackson     : "com.fasterxml.jackson.core:jackson-databind",
+            neo4j       : "org.springframework.boot:spring-boot-starter-data-neo4j",
+            hateos      : "org.springframework.boot:spring-boot-starter-hateoas",
+    ]
+}

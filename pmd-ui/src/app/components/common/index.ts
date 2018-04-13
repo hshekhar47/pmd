@@ -1,0 +1,1 @@
+export * from './pmd-version-picker/pmd-version-picker.component';

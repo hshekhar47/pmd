@@ -1,0 +1,63 @@
+@import "variable.scss";
+
+$cell-padding-width: 10px;
+
+%lvs-row {
+    display: flex;
+    flex-direction: row;
+}
+
+%lvs-col {
+    flex: 1;
+    padding: $cell-padding-width;
+    justify-content: flex-start;
+}
+
+$lvs-col-sizes: (10,15,25,50,75,90) !default;
+
+@each $size in $lvs-col-sizes {
+  .lvs-col-#{$size} {
+    @extend %lvs-col;
+    flex: 0 0 percentage($size/100);
+  }
+}
+
+.list-view-section {
+    border: 1px solid mat-color($bg-palette, 200);    
+    .lvs-dark & {
+        .lvs-col {
+            color: white;
+        }
+    }
+    >.list-view-section-header {
+        background-color: mat-color($bg-palette, 200); 
+        .lvs-row { 
+            @extend %lvs-row;
+            font-weight: bold;
+            >.lvs-col {
+                @extend %lvs-col;
+                color: rgba(0, 0, 0, 0.85);
+            }
+        }
+    }
+
+    &.lvs-dark {
+        >.list-view-section-header {
+            .lvs-row { 
+                >.lvs-col {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    >.list-view-section-body {
+        .lvs-row { 
+            @extend %lvs-row;
+            border-bottom: 1px solid mat-color($bg-palette, 200);  
+            >.lvs-col {
+                @extend %lvs-col;
+            }
+        }
+    }
+}

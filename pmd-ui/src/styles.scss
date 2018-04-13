@@ -1,0 +1,52 @@
+@import "style/theme.scss";
+@import "style/override-angular-md.scss";
+@import "style/variable.scss";
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+// @import "style/function.scss";
+// @import "style/mixin.scss";
+@import "style/typography.scss";
+// @import "style/grid.scss";
+// @import "style/display.scss";
+// @import "style/flex.scss";
+// @import "style/footer.scss";
+@import "style/depth.scss";
+// @import "style/animated.scss";
+//@import "style/global.scss";
+// @import "style/d3.scss";
+@import "style/lvs.scss";
+// @import "style/form.scss";
+
+body, html{
+    font-family: $font-family-sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: mat-color($bg-palette, 100);
+}
+
+bg-white{ background-color: white;}
+
+.stretch { flex: 1;}
+.stretch-vertical { height: 100%; }
+.stretch-horizontal { width: 100%; }
+
+
+.title { color: mat-color($pmd-primary); text-transform: capitalize;}
+
+.page-footer {
+    background-color: mat-color($pmd-primary);
+}
+
+#main-sidenav {
+    font-size: 14px;
+}
+
+// form-group
+.form-group {
+    color: rgba(0, 0, 0, 0.85);    
+    margin-bottom: $grid-gutter-width;
+    label {
+        @extend %label-text;
+    }
+}

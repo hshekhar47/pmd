@@ -1,0 +1,44 @@
+<mat-card *ngIf="contract">
+    <mat-card-header>
+        <mat-card-title><span class="title-bold">{{ contract.name }}</span></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="form-section">
+            <div class="form-section-content container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="labled-field">
+                            <name class="lf-name">Id</name>
+                            <div class="lf-item">{{ contract.id }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="labled-field">
+                            <name class="lf-name">Name</name>
+                            <div class="lf-item">{{ contract.name }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="labled-field">
+                            <name class="lf-name">Description</name>
+                            <div class="lf-item">{{ contract.description }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-section-action container-fluid">
+                <div class="row">
+                    <div class="col d-flex justify-content-end">
+                        <button mat-raised-button color="primary"
+                            [routerLink]="['/contracts', contract.id, 'edit']">
+                            <mat-icon>edit</mat-icon> Modify</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

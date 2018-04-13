@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  neo4jdb:
+    image: neo4j:latest
+    hostname: neo4jdb
+    domainname: studio.bt.com
+    ports:
+      -p 7474:7474
+    networks:
+      - bt-devnet
+
+
+
+networks:
+  bt-devnet:
+    driver: bridge

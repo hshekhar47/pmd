@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="z-depth-0">
+    <mat-toolbar-row>
+        <h2>Contracts</h2>
+        <span class="stretch"></span>
+        <button mat-icon-button matTooltip="View"
+            [routerLink]="['/contracts']"><mat-icon>list</mat-icon></button>
+        <button mat-icon-button matTooltip="New"
+            [routerLink]="['/contracts', 'new']"><mat-icon>add</mat-icon></button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<section>
+    <router-outlet></router-outlet>
+</section>

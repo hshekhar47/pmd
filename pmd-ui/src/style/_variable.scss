@@ -1,0 +1,29 @@
+$font-family-sans-serif:        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace:         SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:              $font-family-sans-serif !default;
+
+$grid-columns:                  12 !default;
+$grid-gutter-width:             30px !default;
+
+$footer-margin-top:             20px;
+$footer-padding-top:            20px;
+$footer-copyright-height:       50px;
+$footer-copyright-line-height:  50px;
+$footer-call-to-action-pt:      1.3rem;
+$footer-call-to-action-pb:      0.5rem;
+$footer-call-to-action-pr:      10px;
+
+
+// colors
+$white:     #ffffff !default;
+$black:     #000000 !default;
+$blue:      #007bff !default;
+$indigo:    #6610f2 !default;
+$purple:    #6f42c1 !default;
+$pink:      #e83e8c !default;
+$red:       #dc3545 !default;
+$orange:    #fd7e14 !default;
+$yellow:    #ffc107 !default;
+$green:     #28a745 !default;
+$teal:      #20c997 !default;
+$cyan:      #17a2b8 !default;

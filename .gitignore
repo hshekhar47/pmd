@@ -1,0 +1,23 @@
+.idea
+.project
+.classpath
+.gradle
+*.iml
+build
+
+
+**/out
+pmd-ui/dist
+pmd-ui/dist-server
+pmd-ui/tmp
+pmd-ui/out-tsc
+pmd-ui/node_modules
+
+pmd-ui/npm-debug.log
+pmd-ui/yarn-error.log
+pmd-ui/testem.log
+pmd-ui/typings
+
+# e2e
+pmd-ui/e2e/*.js
+pmd-ui/e2e/*.map

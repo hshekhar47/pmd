@@ -1,0 +1,54 @@
+buildscript {
+    ext {
+        osPackageVersion = "4.4.0"
+    }
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath("com.netflix.nebula:gradle-ospackage-plugin:${osPackageVersion}")
+    }
+}
+
+plugins {
+    id "io.spring.dependency-management" version "1.0.4.RELEASE"
+}
+
+group 'org.hshekhar.pmd'
+version "0.1.0"
+
+apply from: 'dependencies.gradle'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'nebula.deb'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootRelease}")
+    }
+}
+
+dependencies {
+    compile project(':pmd-api')
+}
+
+task buildDebian(type: Deb) {
+    into "/usr/local/${project.name}"
+}
+
+build.finalizedBy buildDebian
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.5.1'
+}
+

@@ -1,0 +1,1 @@
+export * from  './pmd-versions.component';

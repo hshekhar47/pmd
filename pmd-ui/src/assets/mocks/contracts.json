@@ -1,0 +1,8 @@
+{
+    "data" :[
+        { "id": 1, "name": "Contract-0001", "description": "A sample contract."},
+        { "id": 2, "name": "Contract-0002", "description": "A sample contract."},
+        { "id": 3, "name": "Contract-0003", "description": "A sample contract."},
+        { "id": 4, "name": "Contract-0004", "description": "A sample contract."}
+    ]
+}

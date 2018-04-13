@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {"id": "p001", "group": 1},
+    {"id": "p002", "group": 2},
+    {"id": "a101", "group": 1},
+    {"id": "a102", "group": 1},
+    {"id": "a103", "group": 1},
+    {"id": "a104", "group": 2},
+    {"id": "a105", "group": 2}
+  ],
+  "links": [
+    {"source": "p001", "target": "a101", "value": 1},
+    {"source": "p001", "target": "a102", "value": 1},
+    {"source": "p001", "target": "a103", "value": 1},
+    {"source": "p002", "target": "a104", "value": 1},
+    {"source": "p002", "target": "a105", "value": 1}
+  ]
+}

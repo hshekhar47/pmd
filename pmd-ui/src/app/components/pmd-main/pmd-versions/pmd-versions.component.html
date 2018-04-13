@@ -1,0 +1,58 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <h3 class="h3">Version</h3>
+        <span class="stretch"></span>
+        <button mat-icon-button matTooltip="View"
+            [routerLink]="['/versions']"><mat-icon>list</mat-icon></button>
+        <button mat-icon-button matTooltip="New"
+            [routerLink]="['/versions', 'new']"><mat-icon>add</mat-icon></button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<section>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                <h4 class="h4">Create New Version</h4>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="form" novalidate>
+                <div class="form-section">
+                    <div class="form-section-content">
+                        <div class="form-section-content-group container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <mat-form-field>
+                                        <input matInput placeholder="Code" formControlName="code">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col">
+                                    <mat-form-field>
+                                        <input matInput [matDatepicker]="effectiveFrom" placeholder="Effective From" formControlName="effectiveFrom">
+                                        <mat-datepicker-toggle matSuffix [for]="effectiveFrom"></mat-datepicker-toggle>
+                                        <mat-datepicker #effectiveFrom></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col">
+                                    <mat-form-field>
+                                        <input matInput [matDatepicker]="effectiveUpTo" placeholder="Effective UpTo" fromControlName="effectiveUpTo">
+                                        <mat-datepicker-toggle matSuffix [for]="effectiveUpTo"></mat-datepicker-toggle>
+                                        <mat-datepicker #effectiveUpTo></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-section-action container-fluid">
+                        <div class="row">
+                            <div class="col d-flex justify-content-end">
+                                <button mat-raised-button color="primary"><mat-icon>save</mat-icon>Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>        
+        </mat-card-content>
+    </mat-card>
+</section>

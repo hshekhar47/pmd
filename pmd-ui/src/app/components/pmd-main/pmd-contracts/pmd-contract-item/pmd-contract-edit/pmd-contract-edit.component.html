@@ -1,0 +1,6 @@
+<mat-card *ngIf="contract">
+    <mat-card-header>
+        <mat-card-title><h2 class="title-bold">{{ contract.name }}</h2></mat-card-title>
+    </mat-card-header>
+    <pmd-contract-form [contract]="contract"></pmd-contract-form>
+</mat-card>

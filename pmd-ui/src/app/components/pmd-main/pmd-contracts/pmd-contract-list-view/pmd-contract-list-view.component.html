@@ -1,0 +1,19 @@
+<div class="list-view-section">
+    <div class="list-view-section-header">
+        <div class="lvs-row">
+            <div class="lvs-col-10">#</div>
+            <div class="lvs-col">Name</div>
+        </div>
+
+    </div>
+    <div class="list-view-section-body">
+        <div class="lvs-row" *ngFor="let contract of contracts">
+            <div class="lvs-col-10">
+                {{ contract.id }}    
+            </div>
+            <div class="lvs-col">
+                <a [routerLink]="['/contracts', contract.id]">{{ contract.name }}</a>
+            </div>
+        </div>
+    </div>
+</div>

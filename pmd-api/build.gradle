@@ -1,0 +1,51 @@
+plugins {
+    id "io.spring.dependency-management"
+    id "org.springframework.boot" version "2.0.0.RELEASE"
+}
+
+group 'org.hshekhar.pmd'
+version '0.1.0'
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply from: '../dependencies.gradle'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootRelease}")
+    }
+}
+
+dependencies {
+    compile project(':pmd-graph-service')
+    compile project(':pmd-api-model')
+
+    compile appdependencies.web
+    compile appdependencies.hateos
+    compile appdependencies.neo4j
+    compile appdependencies.lombok
+    compile appdependencies.jodaTime
+    compile appdependencies.guava
+
+    testCompile appdependencies.junit
+}
+
+jar {
+    from("${rootProject.projectDir}/pmd-ui/dist")
+}
+
+bootJar {
+    manifest {
+        attributes(
+                "Implementation-Title": "${project.description}",
+                "Implementation-Version": "${project.version}"
+        )
+    }
+}

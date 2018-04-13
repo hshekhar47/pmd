@@ -1,0 +1,39 @@
+<svg width="635" height="235" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g transform="translate(0,15)">
+  <polyline se:connector="svg_1 svg_4" fill="none" stroke-width="5" stroke="#ffffff" 
+    points="142.511 119.235 158.005 120.365 173.5 121.495" id="svg_5"/>
+  
+  <polyline stroke="#ffffff" se:connector="svg_1 svg_2" fill="none" stroke-width="2" 
+    points="128.643 78.9894 137.464 64.9947 146.285 51" id="svg_3"/>
+  
+  <circle stroke="#ffffff" id="svg_1" r="36.510559" cy="116.499999" cx="105" stroke-width="5" fill="#ff7f00"/>
+  
+  <circle stroke="#ffffff" id="svg_2" r="17.000001" cy="34.000001" cx="156.999999" 
+    stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+  
+  <circle stroke="#ffffff" id="svg_4" r="26.5" cy="123.5" cx="200.999998" 
+    stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+  
+  <circle stroke="#ffffff" id="svg_6" r="19" cy="201" cx="63.499998" 
+    stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+  
+  <polyline stroke="#ffffff" se:connector="svg_1 svg_6" fill="none" stroke-width="5" 
+    points="86.5777 154.011 79.7045 168.005 72.8314 182" id="svg_7"/>
+  
+  <circle stroke="#ffffff" r="13.630144" cy="45" cx="49.500001" 
+    stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+  
+  <circle stroke="#ffffff" r="13.18034" cy="124.500002" cx="38" 
+    stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+  
+  <text font-weight="normal" stroke="#ffffff"
+    transform="matrix(6.789558512835642,0,0,7.391189003968388,-1925.8802621926977,-917.3581827806083) " 
+    xml:space="preserve" 
+    text-anchor="middle" 
+    font-family="Sans-serif" 
+    font-size="24" 
+    y="147.987133" x="349.085698" 
+    stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#ffffff">PMD</text>
+ </g>
+</svg>

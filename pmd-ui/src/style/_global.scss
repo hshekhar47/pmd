@@ -1,0 +1,32 @@
+@import "variable.scss";
+
+@mixin padout($pl: $grid-gutter-width, $pt: $grid-gutter-width, $pr: $grid-gutter-width, $pb: $grid-gutter-width) {
+    @if not ($pl == 0) { padding-left: $pl;}
+    @if not ($pt == 0) { padding-top: $pt;}
+    @if not ($pr == 0) { padding-right: $pr;}
+    @if not ($pb == 0) { padding-bottom: $pb;}
+}
+
+@mixin marginout($pl: $grid-gutter-width, $pt: $grid-gutter-width, $pr: $grid-gutter-width, $pb: $grid-gutter-width) {
+    @if not ($pl == 0) { margin-left: $pl;}
+    @if not ($pt == 0) { margin-top: $pt;}
+    @if not ($pr == 0) { margin-right: $pr;}
+    @if not ($pb == 0) { margin-bottom: $pb;}
+}
+
+.p-none { @include padout(0,0,0,0); }
+.p-all { @include padout();}
+.p-l { @include padout($grid-gutter-width, 0, 0, 0);}
+.p-t { @include padout(0, $grid-gutter-width, 0, 0);}
+.p-r { @include padout(0, 0, $grid-gutter-width, 0);}
+.p-b { @include padout(0, 0, 0, $grid-gutter-width);}
+
+
+.m-none { @include marginout(0,0,0,0); }
+.m-all { @include marginout();}
+.m-l { @include marginout($grid-gutter-width, 0, 0, 0);}
+.m-t { @include marginout(0, $grid-gutter-width, 0, 0);}
+.m-r { @include marginout(0, 0, $grid-gutter-width, 0);}
+.m-b { @include marginout(0, 0, 0, $grid-gutter-width);}
+
+

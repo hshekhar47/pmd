@@ -1,0 +1,27 @@
+@import "variable.scss";
+
+.form-section {
+    padding-top: $grid-gutter-width;
+
+    .form-section-content {
+
+        .form-section-content-group {
+            margin-bottom: $grid-gutter-width;
+            .labled-field {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: $grid-gutter-width;
+                
+                >.lf-label {
+                    color: mat-color($pmd-secondary);
+                    margin-bottom: $grid-gutter-width/4;
+                }
+            }
+        }
+    }
+    .form-section-action {
+        .form-action-status {
+            min-height: 20px;
+        }
+    }
+}

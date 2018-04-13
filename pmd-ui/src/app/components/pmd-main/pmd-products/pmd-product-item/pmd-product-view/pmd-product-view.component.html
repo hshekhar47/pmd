@@ -1,0 +1,64 @@
+<mat-card *ngIf="product">
+    <mat-card-content>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <name for="code">Code</name>
+                        <div class="form-group-data">{{ product.code }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <name>Name</name>
+                        <div class="form-group-data">{{ product.versions[0].name }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <name>Description</name>
+                        <div class="form-group-data">{{ product.versions[0].description }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <name>Attributes</name>
+                        <div class="form-group-data">
+                            <div class="list-view-section">
+                                <div class="list-view-section-header">
+                                    <div class="lvs-row">
+                                        <div class="lvs-col">Name</div>
+                                        <div class="lvs-col">Purpose</div>
+                                        <div class="lvs-col">Type</div>
+                                        <div class="lvs-col-10">Required</div>
+                                    </div>
+                                </div>
+                                <div class="list-view-section-body">
+                                    <pmd-product-attribute-view [attribute]="attribute"
+                                        *ngFor="let attribute of product.versions[0].productTypeAttributes">
+                                    </pmd-product-attribute-view>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <div class="col d-flex justify-content-end">
+                    <button mat-raised-button color="primary"
+                        [routerLink]="['/products', product.gid, 'edit']">
+                        <mat-icon>edit</mat-icon> Modify</button>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,16 @@
+<div class="lvs-row">
+    <div class="lvs-col">
+        <div class="labled-field">{{ attribute.name }} </div>
+    </div>
+    <div class="lvs-col">
+        <div class="labled-field">{{ attribute.purpose }} </div>
+    </div>
+    <div class="lvs-col">
+        <div class="labled-field">{{ attribute.dataType }} </div>
+    </div>
+    <div class="lvs-col-10">
+        <div class="labled-field">
+            <mat-checkbox [checked]="attribute.required" [disabled]="true"></mat-checkbox>
+        </div>
+    </div>
+</div>

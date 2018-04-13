@@ -1,0 +1,56 @@
+@import "function.scss";
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-down($breakpoint, $grid-breakpoints){
+      .hidden-#{$breakpoint} { display: none;}
+    }
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box; // 1
+}
+
+.container {
+    @include make-container();
+    @include make-container-max-widths();
+}
+
+.container-fluid {
+    @include make-container();
+}
+
+
+.row {
+    @include make-row();
+}
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@include make-grid-columns();

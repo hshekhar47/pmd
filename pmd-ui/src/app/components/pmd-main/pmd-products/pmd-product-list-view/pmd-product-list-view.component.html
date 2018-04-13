@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-content>
+        <div class="list-view-section" *ngIf="products">
+            <div class="list-view-section-header">
+                <div class="lvs-row">
+                    <div class="lvs-col">Code</div>
+                    <div class="lvs-col">Name</div>
+                </div>
+            </div>
+            <div class="list-view-section-body">
+                <div class="lvs-row" *ngFor="let product of products">
+                    <div class="lvs-col">
+                        <a [routerLink]="['/products', product.gid]">{{ product.code }}</a>
+                    </div>
+                    <div class="lvs-col">
+                        {{ product.versions[0].name }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+

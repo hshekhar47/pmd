@@ -1,0 +1,14 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <h3 class="h3">Products</h3>
+        <span class="stretch"></span>
+        <button mat-icon-button matTooltip="View"
+            [routerLink]="['/products']"><mat-icon>list</mat-icon></button>
+        <button mat-icon-button matTooltip="New"
+            [routerLink]="['/products', 'new']"><mat-icon>add</mat-icon></button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<section class="bg-white">
+    <router-outlet></router-outlet>
+</section>

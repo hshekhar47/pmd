@@ -1,0 +1,22 @@
+$fill-color: #DFDFDF;
+$stroke-color: #999999;
+
+div.graph-container {
+    overflow: hidden;
+    border: 1px solid mat-color($pmd-primary, A200);
+
+    svg {
+
+        circle {
+            fill: $fill-color;
+            stroke: $stroke-color;
+            stroke-width: 0.1em;
+        }
+
+        line {
+            fill: none;
+            stroke: $stroke-color;
+            stroke-width: 0.1em;
+        }
+    }
+}

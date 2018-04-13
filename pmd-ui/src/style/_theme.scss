@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$pmd-primary:   mat-palette($mat-indigo);
+$pmd-accent:    mat-palette($mat-pink);
+$pmd-warn:      mat-palette($mat-red);
+$pmd-theme:     mat-light-theme($pmd-primary, $pmd-accent, $pmd-warn);
+
+$fg-palette:   mat-palette($mat-blue-grey);
+$bg-palette: mat-palette($mat-grey);
+
+@include angular-material-theme($pmd-theme);
+
